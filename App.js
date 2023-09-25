@@ -1,12 +1,13 @@
-import "./styles.css";
-import ArrayOfObjs from "./ArrayOfObjs"
-
-export default function App() {
+import logo from './logo.svg';
+import './App.css';
+import DigitalClock from './DigitalClock'
+function App() {
   return (
     <div className="App">
-
-      <ArrayOfObjs/>
-      
+      <DigitalClock/>
+        
     </div>
   );
 }
+
+export default App;
