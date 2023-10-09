@@ -1,13 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-import DigitalClock from './DigitalClock'
-function App() {
-  return (
+import React from "react";  
+import BlogContextDemo from "./BlogContextDemo";
+const blogInfo={
+  React:{
+    post: "Learn useContext Hooks",
+    author: "Varun K"
+  },
+  NodeJS:{
+    post:"NodeCommands",
+    author:"Veena M"
+  }
+
+};
+export const BlogContext =React.createContext(blogInfo);
+export default function App(){
+  return(
     <div className="App">
-      <DigitalClock/>
-        
+      <div>
+        <h1> useContext() Demo</h1>
+        <BlogContext.Provider value={blogInfo}><BlogContextDemo/></BlogContext.Provider>
+      </div>
     </div>
   );
-}
+}  
 
-export default App;
+
